@@ -9,8 +9,8 @@ import java.util.Scanner;
 import ro.ase.cts.classes.Angajat;
 import ro.ase.cts.classes.Aplicant;
 
-public class AngajatReader {
-	public static List<Aplicant> readAngajati(String file) throws FileNotFoundException {
+public class AngajatReader extends AplicantReader { 
+	public List<Aplicant> citesteAplicanti(String file) throws FileNotFoundException {
 		Scanner input2 = new Scanner(new File(file));
 		input2.useDelimiter(",");
 		List<Aplicant> angajati = new ArrayList<Aplicant>();

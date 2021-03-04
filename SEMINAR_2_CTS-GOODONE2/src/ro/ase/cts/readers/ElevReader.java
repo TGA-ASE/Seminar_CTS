@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 import ro.ase.cts.classes.Elev;
 import ro.ase.cts.classes.Aplicant;
-public class ElevReader {
-	public static List<Aplicant> readPupil(String file) throws FileNotFoundException {
+public class ElevReader extends AplicantReader { 
+	public List<Aplicant> citesteAplicanti(String file) throws FileNotFoundException {
 		Scanner input2 = new Scanner(new File(file));
 		input2.useDelimiter(",|\n");
 		List<Aplicant> elevi = new ArrayList<Aplicant>();
