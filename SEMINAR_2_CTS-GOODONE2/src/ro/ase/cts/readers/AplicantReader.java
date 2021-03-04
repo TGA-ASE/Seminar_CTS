@@ -5,13 +5,24 @@ import java.util.List;
 import ro.ase.cts.classes.Aplicant;
 
 
-public abstract class AplicantReader {
+public abstract class AplicantReader{
 	
-	public abstract List<Aplicant> citesteAplicanti(String file) throws FileNotFoundException, NumberFormatException;
-	
-		
-		
-		
-	
+	private String fileName;
 
+	public AplicantReader(String fileName) {
+		this.fileName = fileName;
+	}
+	
+	
+	
+	public String getFileName() {
+		return fileName;
+		
+	}
+
+	
+	
+	
+	public abstract List<Aplicant> citesteAplicanti() throws FileNotFoundException;
+	
 }

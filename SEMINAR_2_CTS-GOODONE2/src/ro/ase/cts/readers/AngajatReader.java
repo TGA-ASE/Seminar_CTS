@@ -9,11 +9,16 @@ import java.util.Scanner;
 import ro.ase.cts.classes.Angajat;
 import ro.ase.cts.classes.Aplicant;
 
-public class AngajatReader extends AplicantReader { 
-	public List<Aplicant> citesteAplicanti(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+public class AngajatReader extends AplicantReader { //dam cu extend ca sa iasa bn
+	
+	public AngajatReader(String file) {
+		super(file);
+	}
+	
+	public List<Aplicant> citesteAplicanti() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(getFileName())); //!!!!!!!!!!
 		input2.useDelimiter(",");
-		List<Aplicant> angajati = new ArrayList<Aplicant>();
+		List<Aplicant> angajati = new ArrayList<>();
 
 		while (input2.hasNext()) {
 			String nume = input2.next();
@@ -32,5 +37,4 @@ public class AngajatReader extends AplicantReader {
 		input2.close();
 		return angajati;
 	}
-
 }

@@ -8,9 +8,14 @@ import java.util.Scanner;
 
 import ro.ase.cts.classes.Elev;
 import ro.ase.cts.classes.Aplicant;
-public class ElevReader extends AplicantReader { 
-	public List<Aplicant> citesteAplicanti(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+public class ElevReader extends AplicantReader {
+	
+	public ElevReader(String file) {
+		super(file);
+	}
+	
+	public List<Aplicant> citesteAplicanti() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(getFileName()));
 		input2.useDelimiter(",|\n");
 		List<Aplicant> elevi = new ArrayList<Aplicant>();
 
@@ -32,4 +37,5 @@ public class ElevReader extends AplicantReader {
 		input2.close();
 		return elevi;
 	}
+	
 }

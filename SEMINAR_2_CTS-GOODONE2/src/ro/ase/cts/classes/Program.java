@@ -8,17 +8,18 @@ import java.util.List;
 
 public class Program {
 
-	public static List<Aplicant> citesteAplicanti(String fileName, AplicantReader reader) throws NumberFormatException, FileNotFoundException
+	public static List<Aplicant> citesteAplicanti(AplicantReader reader) throws NumberFormatException, FileNotFoundException
 	
 	{
-		return reader.citesteAplicanti(fileName);
+		return reader.citesteAplicanti();
 	}
 	
 	public static void main(String[] args) {
 		List<Aplicant> listaAngajati;
 		
 		try {
-			listaAngajati = citesteAplicanti("angajati.txt", new AngajatReader());
+			
+			listaAngajati = citesteAplicanti( new AngajatReader("angajati.txt")); //hard coded
 			for(Aplicant angajat:listaAngajati)
 				System.out.println(angajat.toString());
 		} catch (FileNotFoundException e) {
