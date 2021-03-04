@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.Scanner;
 
 import ro.ase.cts.classes.Elev;
-
+import ro.ase.cts.classes.Aplicant;
 public class ElevReader {
-	public static List<Elev> readPupil(String file) throws FileNotFoundException {
+	public static List<Aplicant> readPupil(String file) throws FileNotFoundException {
 		Scanner input2 = new Scanner(new File(file));
 		input2.useDelimiter(",|\n");
-		List<Elev> elevi = new ArrayList<Elev>();
+		List<Aplicant> elevi = new ArrayList<Aplicant>();
 
 		while (input2.hasNext()) {
 			String nume = input2.next();
