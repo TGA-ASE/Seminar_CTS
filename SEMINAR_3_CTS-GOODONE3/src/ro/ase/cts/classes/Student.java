@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Student extends Aplicant {
 	protected String facultate;
-	protected int an_studii;
+	protected int anStudii;
 	private static int sumaFinantare=20;
 	public String getFacultate() {
 		return facultate;
@@ -14,12 +14,12 @@ public class Student extends Aplicant {
 		this.facultate = facultate;
 	}
 
-	public int getAn_studii() {
-		return an_studii;
+	public int getAnStudii() {
+		return anStudii;
 	}
 
-	public void setAn_studii(int an_studii) {
-		this.an_studii = an_studii;
+	public void setAnStudii(int an_studii) {
+		this.anStudii = an_studii;
 	}
 
 	public Student() {
@@ -31,14 +31,13 @@ public class Student extends Aplicant {
 			String facultate, int an_studii) {
 		super(nume, prenume, varsta, punctaj, nr_proiecte, denumireProiect);
 		this.facultate = facultate;
-		this.an_studii = an_studii;
+		this.anStudii = an_studii;
 	}
 
 	@Override
 	public String toString() {
-		return "Student: Nume=" + nume + ", Prenume=" + prenume + ", Varsta=" + varsta + ", Punctaj=" + punctaj
-				+ ", Nr_proiecte=" + nr_proiecte + ", DenumireProiect=" + Arrays.toString(denumireProiect)
-				+ "Facultate=" + facultate + ", An_studii=" + an_studii;
+		
+				return super.toString()+ "Student:"+ "Facultate=" + facultate + ", An_studii=" + anStudii;
 	}
 
 	public int finantare() {
@@ -47,10 +46,13 @@ public class Student extends Aplicant {
 		return s;
 	}
 
-	@Override
-	public float getSumaFinantare() {
+	public  float getSumaFinantare() {
 		// TODO Auto-generated method stub
-		return this.sumaFinantare;
+		return sumaFinantare;
+	}
+
+	public static void setSumaFinantare(int sumaFinantare) {
+		Student.sumaFinantare = sumaFinantare;
 	}
 
 }

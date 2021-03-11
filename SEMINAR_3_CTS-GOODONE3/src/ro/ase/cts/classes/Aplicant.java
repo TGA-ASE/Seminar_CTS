@@ -5,13 +5,23 @@ public abstract class Aplicant {
 	protected String prenume;
 	protected int varsta;
 	protected int punctaj;
-	protected int nr_proiecte;
-	protected String[] denumireProiect;
+	protected int nrProiecte;
+	protected String[] denumiriProiect;
 	
 	public abstract float getSumaFinantare();
 	
 
-	
+	public void afiseazaStatus(Proiect proiect)
+	{
+		System.out.print("Aplicantul "+nume + " "+prenume);
+		
+		if(punctaj>proiect.getPragAcceptare())
+		{System.out.println(" a fost acceptat");}
+		else
+		{System.out.println(" nu a fost acceptat");}
+		
+		
+	}
 
 	public String getNume() {
 		return nume;
@@ -63,18 +73,20 @@ public abstract class Aplicant {
 		this.prenume = prenume;
 		this.varsta = varsta;
 		this.punctaj = punctaj;
-		this.nr_proiecte = nr_proiecte;
-		this.denumireProiect = denumireProiect;
+		this.nrProiecte = nr_proiecte;
+		this.denumiriProiect = denumireProiect;
 	}
 
 	public int getNr_proiecte() {
-		return nr_proiecte;
+		return nrProiecte;
 	}
 
 	public void setNr_proiecte(int nr_proiecte, String[] vect) {
-		this.nr_proiecte = nr_proiecte;
-		this.denumireProiect = vect;
+		this.nrProiecte = nr_proiecte;
+		this.denumiriProiect = vect;
 	}
+	
+	
 	
 	
 

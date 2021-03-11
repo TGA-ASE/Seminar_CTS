@@ -42,8 +42,7 @@ public class Angajat extends Aplicant {
 
 	@Override
 	public String toString() {
-		return "Angajat: Nume=" + nume + ", Prenume=" + prenume + ", Varsta=" + varsta + ", Punctaj=" + punctaj
-				+ ", Nr_proiecte=" + nr_proiecte + ", DenumireProiect=" + Arrays.toString(denumireProiect) + "Ocupatie="
+		return super.toString()  + "Ocupatie="
 				+ ocupatie + ", salariu=" + salariu;
 	}
 
@@ -56,10 +55,10 @@ public class Angajat extends Aplicant {
 
 
 
-	@Override
-	public float getSumaFinantare() {
+	
+	public  float getSumaFinantare() {
 		// TODO Auto-generated method stub
-		return this.sumaFinantare;
+		return sumaFinantare;
 	}
 
 }
