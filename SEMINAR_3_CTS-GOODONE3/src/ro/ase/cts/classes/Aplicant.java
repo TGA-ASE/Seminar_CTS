@@ -1,5 +1,7 @@
 package ro.ase.cts.classes;
 
+import java.util.Arrays;
+
 public abstract class Aplicant {
 	protected String nume;
 	protected String prenume;
@@ -84,6 +86,13 @@ public abstract class Aplicant {
 	public void setNr_proiecte(int nr_proiecte, String[] vect) {
 		this.nrProiecte = nr_proiecte;
 		this.denumiriProiect = vect;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Aplicant [nume=" + nume + ", prenume=" + prenume + ", varsta=" + varsta + ", punctaj=" + punctaj
+				+ ", nrProiecte=" + nrProiecte + ", denumiriProiect=" + Arrays.toString(denumiriProiect) + "]";
 	}
 	
 	
