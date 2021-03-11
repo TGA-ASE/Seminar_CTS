@@ -5,9 +5,15 @@ import java.util.Arrays;
 public class Angajat extends Aplicant {
 	private String ocupatie;
 	private int salariu;
-
+	private static float sumaFinantare=10;
 	public String getOcupatie() {
 		return ocupatie;
+	}
+
+	
+
+	public static void setSumaFinantare(float sumaFinantare) {
+		Angajat.sumaFinantare = sumaFinantare;
 	}
 
 	public void setOcupatie(String ocupatie) {
@@ -46,6 +52,14 @@ public class Angajat extends Aplicant {
 		// TODO Auto-generated method stub
 		System.out.println("Angajatul " + getNume() + " " + getPrenume() + " primeste" + s + " Euro/zi in proiect.");
 		return s;
+	}
+
+
+
+	@Override
+	public float getSumaFinantare() {
+		// TODO Auto-generated method stub
+		return this.sumaFinantare;
 	}
 
 }

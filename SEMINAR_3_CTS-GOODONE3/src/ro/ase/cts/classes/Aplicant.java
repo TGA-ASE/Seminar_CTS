@@ -7,6 +7,11 @@ public abstract class Aplicant {
 	protected int punctaj;
 	protected int nr_proiecte;
 	protected String[] denumireProiect;
+	
+	public abstract float getSumaFinantare();
+	
+
+	
 
 	public String getNume() {
 		return nume;
