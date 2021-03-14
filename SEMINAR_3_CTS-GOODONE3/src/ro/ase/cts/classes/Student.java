@@ -46,13 +46,17 @@ public class Student extends Aplicant {
 		return s;
 	}
 
-	public  float getSumaFinantare() {
-		// TODO Auto-generated method stub
+	@Override
+	public float getSumaFinantata() {
 		return sumaFinantare;
 	}
 
-	public static void setSumaFinantare(int sumaFinantare) {
-		Student.sumaFinantare = sumaFinantare;
+	public static float getSumaFinantare() {
+		return sumaFinantare;
+	}
+
+	public static void setSumaFinantare(float sumaFinantare) {
+		Student.sumaFinantare = (int) sumaFinantare;
 	}
 
 }

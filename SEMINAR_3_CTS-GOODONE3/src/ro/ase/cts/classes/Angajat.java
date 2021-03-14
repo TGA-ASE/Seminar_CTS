@@ -12,9 +12,7 @@ public class Angajat extends Aplicant {
 
 	
 
-	public static void setSumaFinantare(float sumaFinantare) {
-		Angajat.sumaFinantare = sumaFinantare;
-	}
+	
 
 	public void setOcupatie(String ocupatie) {
 		this.ocupatie = ocupatie;
@@ -56,9 +54,16 @@ public class Angajat extends Aplicant {
 
 
 	
-	public  float getSumaFinantare() {
-		// TODO Auto-generated method stub
+	@Override
+	public float getSumaFinantata() {
 		return sumaFinantare;
 	}
 
+	public static float getSumaFinantare() {
+		return sumaFinantare;
+	}
+
+	public static void setSumaFinantare(float sumaFinantare) {
+		Angajat.sumaFinantare = (int) sumaFinantare;
+	}
 }

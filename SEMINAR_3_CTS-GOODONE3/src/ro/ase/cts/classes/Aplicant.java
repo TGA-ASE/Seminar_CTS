@@ -10,7 +10,7 @@ public abstract class Aplicant {
 	protected int nrProiecte;
 	protected String[] denumiriProiect;
 	
-	public abstract float getSumaFinantare();
+	public abstract float getSumaFinantata();
 	
 
 	public void afiseazaStatus(Proiect proiect)
@@ -97,6 +97,6 @@ public abstract class Aplicant {
 	
 	
 	
-	
+
 
 }

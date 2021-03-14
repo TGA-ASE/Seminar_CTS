@@ -46,13 +46,16 @@ public class Elev extends Aplicant {
 	}
 
 	@Override
-	public float getSumaFinantare() {
-		// TODO Auto-generated method stub
-		return this.sumaFinantare;
+	public float getSumaFinantata() {
+		return sumaFinantare;
 	}
 
-	public static void setSumaFinantare(int sumaFinantare) {
-		Elev.sumaFinantare = sumaFinantare;
+	public static float getSumaFinantare() {
+		return sumaFinantare;
+	}
+
+	public static void setSumaFinantare(float sumaFinantare) {
+		Elev.sumaFinantare = (int) sumaFinantare;
 	}
 
 }
