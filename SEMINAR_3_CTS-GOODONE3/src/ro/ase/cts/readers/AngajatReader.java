@@ -16,21 +16,21 @@ public class AngajatReader extends AplicantReader { // dam cu extend ca sa iasa 
 	}
 
 	public List<Aplicant> citesteAplicanti() throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(getFileName())); // !!!!!!!!!!
-		input2.useDelimiter(",");
+		Scanner input = new Scanner(new File(getFileName())); // !!!!!!!!!!
+		input.useDelimiter(",");
 		List<Aplicant> angajati = new ArrayList<>();
 
-		while (input2.hasNext()) {
-			Angajat asd = new Angajat();
-			super.citesteAplicant(input2, asd);
-			int salariu = input2.nextInt();
-			String ocupatie = input2.next();
-			asd.setSalariu(salariu);
-			asd.setOcupatie(ocupatie);
+		while (input.hasNext()) {
+			Angajat angajatNr1 = new Angajat();
+			super.citesteAplicant(input, angajatNr1);
+			int salariu = input.nextInt();
+			String ocupatie = input.next();
+			angajatNr1.setSalariu(salariu);
+			angajatNr1.setOcupatie(ocupatie);
 			// asd.set
-			angajati.add(asd);
+			angajati.add(angajatNr1);
 		}
-		input2.close();
+		input.close();
 		return angajati;
 	}
 }

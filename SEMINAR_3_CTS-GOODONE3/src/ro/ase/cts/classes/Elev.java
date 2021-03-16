@@ -32,9 +32,9 @@ public class Elev extends Aplicant {
 		super();
 	}
 
-	public Elev(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect,
+	public Elev(String nume, String prenume, int varsta, int punctaj, int nrProiecte, String[] denumireProiect,
 			int clasa, String tutore) {
-		super(nume, prenume, varsta, punctaj, nr_proiecte, denumireProiect);
+		super(nume, prenume, varsta, punctaj, nrProiecte, denumireProiect);
 		this.clasa = clasa;
 		this.tutore = tutore;
 	}

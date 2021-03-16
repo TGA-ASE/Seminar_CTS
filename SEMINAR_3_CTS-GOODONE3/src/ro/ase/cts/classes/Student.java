@@ -27,11 +27,11 @@ public class Student extends Aplicant {
 
 	}
 
-	public Student(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect,
-			String facultate, int an_studii) {
-		super(nume, prenume, varsta, punctaj, nr_proiecte, denumireProiect);
+	public Student(String nume, String prenume, int varsta, int punctaj, int nrProiecte, String[] denumireProiect,
+			String facultate, int anStudii) {
+		super(nume, prenume, varsta, punctaj, nrProiecte, denumireProiect);
 		this.facultate = facultate;
-		this.anStudii = an_studii;
+		this.anStudii = anStudii;
 	}
 
 	@Override
