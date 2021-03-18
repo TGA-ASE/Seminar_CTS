@@ -1,0 +1,2 @@
+module SEMINAR_4 {
+}
