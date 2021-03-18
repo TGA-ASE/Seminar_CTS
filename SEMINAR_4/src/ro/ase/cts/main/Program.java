@@ -25,8 +25,8 @@ public static void main(String[] args)
 //System.out.println(c4.toString());
 //
 	
-	Gantera g1=Gantera.getInstanta(20, "Firma", "Material");
-	Gantera g2=Gantera.getInstanta(40, "Firma2", "Material2");
+	Gantera g1=Gantera.getInstanta(20, "Firma", "Material",(float)60);
+	Gantera g2=Gantera.getInstanta(40, "Firma2", "Material2",(float)120);
 	System.out.println(g1);
 	System.out.println(g2);
 	
