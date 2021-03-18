@@ -5,6 +5,14 @@ public class ClinicaVeterinara {
 	private String adresa;
 	private int nrDoctori;
 	private float buget;
+	
+	private ClinicaVeterinara() {
+		this.nume = "ClinVet";
+		this.buget = 777;
+		this.nrDoctori = 2;
+		this.adresa="Undeva departe";
+	}
+	
 	public String getNume() {
 		return nume;
 		
