@@ -6,19 +6,30 @@ public class ClinicaVeterinara {
 	private int nrDoctori;
 	private float buget;
 	
-	private ClinicaVeterinara() {
-		this.nume = "ClinVet";
-		this.buget = 777;
-		this.nrDoctori = 2;
-		this.adresa="Undeva departe";
+	
+	
+	
+	public ClinicaVeterinara(String nume, String adresa, int nrDoctori, float buget) {
+		super();
+		this.nume = nume;
+		this.adresa = adresa;
+		this.nrDoctori = nrDoctori;
+		this.buget = buget;
 	}
+
+	//private ClinicaVeterinara() {
+	//	this.nume = "ClinVet";
+	//	this.buget = 777;
+	//	this.nrDoctori = 2;
+	//	this.adresa="Undeva departe";
+	//}
 	
 	public String getNume() {
 		return nume;
 		
 		
 	}
-	private static final ClinicaVeterinara instanta = new ClinicaVeterinara();
+	private static final ClinicaVeterinara instanta = new ClinicaVeterinara("ClinVet","Undeva departe",2,777);
 	public void setNume(String nume) {
 		this.nume = nume;
 	}
