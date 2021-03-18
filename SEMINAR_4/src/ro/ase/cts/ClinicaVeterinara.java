@@ -8,8 +8,8 @@ public class ClinicaVeterinara {
 	
 	
 	
-	
-	public ClinicaVeterinara(String nume, String adresa, int nrDoctori, float buget) {
+	// Constructorul trebuie obligatoriu sa fie private
+	private ClinicaVeterinara(String nume, String adresa, int nrDoctori, float buget) {
 		super();
 		this.nume = nume;
 		this.adresa = adresa;
@@ -29,6 +29,7 @@ public class ClinicaVeterinara {
 		
 		
 	}
+	//instanta statica este initializata la momentul declararii la EagerInitialization
 	private static final ClinicaVeterinara instanta = new ClinicaVeterinara("ClinVet","Undeva departe",2,777);
 	public void setNume(String nume) {
 		this.nume = nume;
@@ -51,6 +52,15 @@ public class ClinicaVeterinara {
 	public void setBuget(float buget) {
 		this.buget = buget;
 	}
+	
+	
+@Override
+	public String toString() {
+		return "ClinicaVeterinara [nume=" + nume + ", adresa=" + adresa + ", nrDoctori=" + nrDoctori + ", buget="
+				+ buget + "]";
+	}
+
+	//Functia statica care va return instanta
 	public static ClinicaVeterinara getInstanta(String nume ,String adresa, int nrDoctori, float capital) {
 		return instanta;
 	}
