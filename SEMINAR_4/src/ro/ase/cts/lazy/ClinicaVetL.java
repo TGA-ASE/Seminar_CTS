@@ -28,6 +28,41 @@ public class ClinicaVetL {
 		return "ClinicaVetL [nume=" + nume + ", adresa=" + adresa + ", nrDoctori=" + nrDoctori + ", buget=" + buget
 				+ "]";
 	}
+
+	public String getNume() {
+		return nume;
+	}
+
+	public void setNume(String nume) {
+		this.nume = nume;
+	}
+
+	public String getAdresa() {
+		return adresa;
+	}
+
+	public void setAdresa(String adresa) {
+		this.adresa = adresa;
+	}
+
+	public int getNrDoctori() {
+		return nrDoctori;
+	}
+
+	public void setNrDoctori(int nrDoctori) {
+		this.nrDoctori = nrDoctori;
+	}
+
+	public float getBuget() {
+		return buget;
+	}
+
+	public void setBuget(float buget) {
+		this.buget = buget;
+	}
+	
+	
+	
 	
 	
 }
