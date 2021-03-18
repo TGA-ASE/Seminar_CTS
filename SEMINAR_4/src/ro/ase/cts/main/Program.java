@@ -25,16 +25,18 @@ public static void main(String[] args)
 //System.out.println(c4.toString());
 //
 	
-	Gantera g1=Gantera.getInstanta(20, "Firma", "Material",(float)60);
-	Gantera g2=Gantera.getInstanta(40, "Firma2", "Material2",(float)120);
+	Gantera g1=Gantera.getInstanta(20, "Firma", "Material",60f);
+	Gantera g2=Gantera.getInstanta(40, "Firma2", "Material2",120f);
+	
 	System.out.println(g1);
 	System.out.println(g2);
 	
 	g1.setGreutate(40);
 	g2.setMaterial("MaterialTest");
+	g1.setPret(240f);
 	
 	System.out.println(g1);
 	System.out.println(g2);
-	
+	//Gantera g3=new Gantera(40, "Firma2", "Material2",120f);
 	}
 }

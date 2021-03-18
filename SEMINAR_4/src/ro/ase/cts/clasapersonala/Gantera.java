@@ -48,6 +48,18 @@ public void setMaterial(String material) {
 
 
 
+public Float getPret() {
+	return pret;
+}
+
+
+
+public void setPret(Float pret) {
+	this.pret = pret;
+}
+
+
+
 @Override
 public String toString() {
 	return "Gantera [greutate=" + greutate + ", numeFirma=" + numeFirma + ", material=" + material + ", pret=" + pret
