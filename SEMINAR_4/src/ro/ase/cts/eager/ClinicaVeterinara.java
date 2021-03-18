@@ -1,4 +1,4 @@
-package ro.ase.cts;
+package ro.ase.cts.eager;
 
 public class ClinicaVeterinara {
 	private String nume;
@@ -61,7 +61,7 @@ public class ClinicaVeterinara {
 	}
 
 	//Functia statica care va return instanta
-	public static ClinicaVeterinara getInstanta(String nume ,String adresa, int nrDoctori, float capital) {
+	public static ClinicaVeterinara getInstanta() {
 		return instanta;
 	}
 	
