@@ -1,5 +1,7 @@
-package Main;
+package C_PROBLEMA2;
 
+import C_PROBLEMA2.FactoryCategorie;
+import C_PROBLEMA2.Raceala;
 import farmacie.clase.CategorieMedicament;
 import farmacie.clase.FarmacieFactory;
 import farmacie.clase.TipMedicament;
@@ -8,20 +10,21 @@ public class Program {
 	public static TipMedicament getTip()
 	{return TipMedicament.Body;}
 	
+	public static FactoryCategorie getTipFactory()
+	{return new FactoryGripa();}
+	
+	public static void printeazaCategorie(FactoryCategorie fabrica,float pretDeBaza) {
+		C_PROBLEMA2.CategorieMedicament cm2=fabrica.CreateCM(pretDeBaza);		
+		System.out.println(cm2.toString());	
+	}
 	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		FarmacieFactory ff=new FarmacieFactory();
-		try {
-			CategorieMedicament durere= ff.createMed(TipMedicament.Durere,5);
-			CategorieMedicament body= ff.createMed(TipMedicament.Body,10);
-			CategorieMedicament categorie= ff.createMed(getTip(),15);
-	System.out.println(durere.toString());	
-	System.out.println(body.toString());
-	System.out.println(categorie.toString());
 	
+		try {
+	printeazaCategorie(getTipFactory(),10);
 	
 		
 		} catch (Exception e) {
