@@ -3,7 +3,7 @@ package ro.ase.cts.PrototypeV1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Client implements IClient {
+public class Client implements AbstractPrototype {
 	
 	private int codClient;
 	private String nume;
@@ -34,7 +34,7 @@ public class Client implements IClient {
 
 
 	@Override
-	public IClient copiaza() {
+	public AbstractPrototype copiaza() {
 		Client client=new Client();
 		client.codClient=this.codClient;
 		client.varsta=this.varsta;
