@@ -1,0 +1,2 @@
+module Seminar_7 {
+}
