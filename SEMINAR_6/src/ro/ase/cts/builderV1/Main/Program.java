@@ -17,6 +17,8 @@ public class Program {
 	Rezervare rezervare3= new BuilderV1(123).setGenMuzica("Ceva").build();
 	
 	System.out.println(rezervare3.toString());
+	rezervare3.setScaunErgonomic(true);
+	System.out.println(rezervare3.toString());
 
 	}
 

@@ -14,6 +14,8 @@ public class Program {
 		
 		System.out.println(rezervare1.toString());
 		System.out.println(rezervare2.toString());
+		rezervare2.setBauturaRacoritoare(false);
+		System.out.println(rezervare2.toString());
 	}
 	
 
