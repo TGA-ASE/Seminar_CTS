@@ -2,7 +2,7 @@ package test;
 
 import static org.junit.Assert.*;
 
-
+import org.junit.Before;
 import org.junit.Test;
 
 import clase.Grupa;
@@ -11,7 +11,8 @@ import clase.Student;
 
 
 public class JU4TGrupa {
-
+Grupa grupa;
+	
 	
 	@Test
 	public void constructorTest() {
@@ -74,5 +75,29 @@ public class JU4TGrupa {
 		}
 		assertEquals(1f, grupa.getPromovabilitate(),.001f);
 	}
+	
+	@Test
+	public void bounderyPromovabilitate()
+	{
+		
+		Grupa grupa=new Grupa(1010);
+		assertEquals(0, grupa.getPromovabilitate(),0.001f);
+		
+	}
+	
+	@Test
+	public void cardinalityPromovabilitate()
+	{
+		Grupa grupa = new Grupa(1050);
+		Student student = new Student();
+		student.adaugaNota(5);
+		grupa.adaugaStudent(student);
+		
+	assertEquals(1f, grupa.getPromovabilitate(),0.001f);
+	}
+	
+	
+	
+
 	
 }

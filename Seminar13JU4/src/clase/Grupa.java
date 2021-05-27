@@ -37,6 +37,9 @@ public class Grupa {
     }
 
     public float getPromovabilitate(){
+    	
+    	if(this.studenti.size()==0)
+    	{return 0;}
         float nrIntegralisti=0;
         for(IStudent student:studenti){
             if(!student.areRestante()){
