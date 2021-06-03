@@ -5,35 +5,35 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import clase.Grupa;
 import clase.IStudent;
 
 public class GrupaFakeTest {
 
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
-	public void PromovobalitateFaraRestanteTest() {
+	@Category({UrgentTests.class, SpecialTests.class})
+	public void testpromoNoRestante() {
 		FakeStudent studentFake = new FakeStudent();
-		studentFake.setAreRestante(false);
-		Grupa grupa = new Grupa(1079);
+		studentFake.setAreRestanta(false);
+		
+		Grupa grupa = new Grupa(1012);
 		grupa.adaugaStudent(studentFake);
+		
 		assertEquals(1, grupa.getPromovabilitate(), 0.01f);
 	}
 	
 	@Test
-	public void PromovobalitateCuRestanteTest() {
+	@Category({NormalTests.class, SpecialTests.class})
+	public void testpromoWithRestante() {
 		FakeStudent studentFake = new FakeStudent();
-		studentFake.setAreRestante(true);
-		Grupa grupa = new Grupa(1079);
+		studentFake.setAreRestanta(true);
+		
+		Grupa grupa = new Grupa(1012);
 		grupa.adaugaStudent(studentFake);
+		
 		assertEquals(0, grupa.getPromovabilitate(), 0.01f);
 	}
 

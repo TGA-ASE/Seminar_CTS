@@ -5,8 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({  GrupaFakeTest.class, JU4TGrupa.class, 
-		TestCaseDummyT.class, TestCaseGetPromovabilitate.class })
+@SuiteClasses({TestCaseDummyT.class, TestCaseGetPromovabilitate.class, GrupaFakeTest.class})
 public class SuitaCompleta {
 
 }
